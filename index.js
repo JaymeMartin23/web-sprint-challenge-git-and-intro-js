@@ -230,7 +230,7 @@ Use getArtistByIndex to do the following:
 function getArtistByIndex(array, number) {
   return`the artist at index ${array[number].id} is ${array[number].name}';
 }
-console.log(getArtistByIndex[19, name]);
+console.log(getArtistByIndex(15, name));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -256,7 +256,7 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
+function removeArtist(array) {
   /*Your Code Here*/
 }
 
@@ -278,10 +278,11 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(name, years, genre, nationality, bio) {
+  return {name, years, genre, nationality, bio};
 }
 
+console.log(addArtist('Jayme Martin', '1970-2022', 'Full Stack Development', 'American', 'I've worked for many years in the construciton field including many years with different building departments. I signed up with Bloomtech to learn new skills and switch careers.'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
