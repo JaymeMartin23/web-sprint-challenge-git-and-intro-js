@@ -230,7 +230,7 @@ Use getArtistByIndex to do the following:
 function getArtistByIndex(array, number) {
   return`the artist at index ${array[number].id} is ${array[number].name}';
 }
-console.log(getArtistByIndex(19, name));
+console.log(getArtistByIndex[19, name]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
