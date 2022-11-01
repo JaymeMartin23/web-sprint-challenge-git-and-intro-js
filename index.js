@@ -228,9 +228,9 @@ Use getArtistByIndex to do the following:
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, number) {
-  return`the artist at index ${array[number].id} is ${array[number].name}';
+  return`the artist at index ${array[number].id} is ${array[number].name}`;
 }
-console.log(getArtistByIndex(15, name));
+console.log(getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -241,11 +241,16 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(array) {
+  let namesArray = [...array]
+ for (let i =0; i < namesArray.length; i++){
+  namesArray[i] = namesArray[i].name
+ //console.log('person:', array[i])
+}
+return namesArray
 }
 
-
+console.log(listOfNames(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -256,7 +261,7 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(array) {
+function removeArtist() {
   /*Your Code Here*/
 }
 
@@ -282,7 +287,7 @@ function addArtist(name, years, genre, nationality, bio) {
   return {name, years, genre, nationality, bio};
 }
 
-console.log(addArtist('Jayme Martin', '1970-2022', 'Full Stack Development', 'American', 'I've worked for many years in the construciton field including many years with different building departments. I signed up with Bloomtech to learn new skills and switch careers.'));
+console.log(addArtist('Jayme Martin', '1970-2022', 'Full Stack Development', 'American', "I've worked for many years in the construciton field including many years with different building departments. I signed up with Bloomtech to learn new skills and switch careers."));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -325,8 +330,10 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(array, number){
+//  for(let i =0; i < artists.length; i++){
+ //  if(nationality[i].includes('Spanish'));
+//  }
 }
 
 
