@@ -246,8 +246,8 @@ function listOfNames(array) {
  for (let i =0; i < namesArray.length; i++){
   namesArray[i] = namesArray[i].name
  //console.log('person:', array[i])
-}
-return namesArray
+  }
+  return namesArray
 }
 
 console.log(listOfNames(artists));
@@ -263,11 +263,11 @@ Use removeArtist to do the following:
 
 function removeArtist(array, number) {
   let modifiedArray = [...array]
-  for (let i = 0; i < array.length; i++){
- }
+  modifiedArray.splice(number,1);
+ return modifiedArray
 }
 
-
+console.log(removeArtist(artists, 3));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -300,15 +300,15 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 //all artists who painted more than 100 paintings
-// function lotsOfArt(array) {
-// let filteredList = [...array];
-// for(let i = 0; i < filteredList.length; i++) {
-//   if namesArray[i] = namesArray[i].paintings
-//   if(array[i].paintings > 100){
-//   }
-// }
-// return filteredList;
-// }
+function lotsOfArt(array) {
+let filteredList = [];
+for(let i = 0; i < array.length; i++) {
+  if(array[i].paintings > 100){
+    filteredList.push(array[i].name)
+  }
+}
+return filteredList;
+}
 // console.log(filteredList[i].artists, "paintings" > 100);
 
 
@@ -322,10 +322,16 @@ Use artistInfo to do the following:
   "Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."
 */
 
-//  function artistInfo(array, name){
-//   return `${array[number].name}, ${array[number].bio}`;
-//  }
-//  console.log(artistInfo('Frida Kahlo', 'bio'));
+ function artistInfo(array, name){
+  let bio = ""
+  for (let i=0; i< array.length; i++){
+    if (array[i].name === name){
+      bio = array[i].bio
+    }
+  }
+  return bio;
+ }
+// console.log(artistInfo('Frida Kahlo', 'bio'));
 
 
 
