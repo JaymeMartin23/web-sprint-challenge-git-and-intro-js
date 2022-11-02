@@ -331,7 +331,7 @@ Use artistInfo to do the following:
   }
   return bio;
  }
-// console.log(artistInfo('Frida Kahlo', 'bio'));
+//console.log(artistInfo('Frida Kahlo', 'bio'));
 
 
 
@@ -346,11 +346,16 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, nationality){
-//  for(let i =0; i < artists.length; i++){
- //  if(nationality[i].includes('Spanish'));
-//  }
+  let nationality = ""
+  for(let i =0; i < array.length; i++){
+  if(array[i].nationality === nationality){
+  nationality = array[i].nationality
+  }
+}
+  return nationality;
 }
 
+//console.log(artists, 'Spanish');
 
 
 /* ***** END OF TASKS ***** */
