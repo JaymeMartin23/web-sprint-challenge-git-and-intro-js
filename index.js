@@ -285,8 +285,11 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(name, years, genre, nationality, bio) {
-  return {name, years, genre, nationality, bio};
+function addArtist(array, name, years, genre, nationality, bio) {
+  const newAddedArtist = [...array]
+  const newArtist = {name, years, genre, nationality, bio};
+  newAddedArtist.push(newArtist)
+  return newAddedArtist
 }
 
 console.log(addArtist('Jayme Martin', '1970-2022', 'Full Stack Development', 'American', "I've worked for many years in the construciton field including many years with different building departments. I signed up with Bloomtech to learn new skills and switch careers."));
@@ -346,13 +349,13 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, nationality){
-  let nationality = ""
+  let artistArray = []
   for(let i =0; i < array.length; i++){
   if(array[i].nationality === nationality){
-  nationality = array[i].nationality
+  artistArray.push (array[i].name)
   }
 }
-  return nationality;
+  return artistArray;
 }
 
 //console.log(artists, 'Spanish');
